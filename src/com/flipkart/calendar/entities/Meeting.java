@@ -11,7 +11,8 @@ public class Meeting {
     }
 
     public boolean isConflicting(Meeting meeting) {
-        return this.timeRange.isWithin(meeting.timeRange);
+        boolean value = this.timeRange.conflicts(meeting.timeRange);
+        return this.timeRange.conflicts(meeting.timeRange);
     }
 
     public boolean withinTimeRange(TimeRange period) {

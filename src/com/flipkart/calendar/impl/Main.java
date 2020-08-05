@@ -4,7 +4,6 @@ import com.flipkart.calendar.entities.Meeting;
 import com.flipkart.calendar.entities.Organizer;
 import com.flipkart.calendar.entities.TimeRange;
 
-import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;

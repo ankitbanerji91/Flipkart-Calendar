@@ -17,6 +17,12 @@ public class TimeRange {
                 (timeRange.endTime.after(this.endTime) || timeRange.endTime.equals(this.endTime));
     }
 
+    public boolean conflicts(TimeRange timeRange) {
+        return !((timeRange.startTime.after(this.endTime) || timeRange.startTime.equals(this.endTime))
+                ||
+                (timeRange.endTime.before(this.startTime) || timeRange.endTime.equals(this.startTime)));
+    }
+
     @Override
     public String toString() {
         return "TimeRange{" +

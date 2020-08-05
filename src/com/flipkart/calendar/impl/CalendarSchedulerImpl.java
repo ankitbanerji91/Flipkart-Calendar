@@ -30,7 +30,7 @@ public class CalendarSchedulerImpl implements CalendarScheduler {
 
     private boolean canScheduleMeeting(Meeting meeting, List<Meeting> meetingsScheduled) {
         for (Meeting alreadyScheduledMeeting : meetingsScheduled) {
-            if (alreadyScheduledMeeting.isConflicting(meeting)) {
+            if (meeting.isConflicting(alreadyScheduledMeeting)) {
                 return false;
             }
         }

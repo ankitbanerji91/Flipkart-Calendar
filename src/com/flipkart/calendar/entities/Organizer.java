@@ -26,11 +26,11 @@ public class Organizer {
 
     public int compareHierarchy(Organizer organizer) {
         if (this.hierarchy.priority > organizer.hierarchy.priority) {
-            return -1;
+            return 1;
         }
 
         if (this.hierarchy.priority < organizer.hierarchy.priority) {
-            return 1;
+            return -1;
         }
 
         return 0;
